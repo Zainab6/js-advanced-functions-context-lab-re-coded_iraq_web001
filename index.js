@@ -15,17 +15,17 @@ function createEmployeeRecords(twoRows){
   }
   
   
-// function createTimeInEvent(employee ,Date){
-//   let [date , hour]= Date.split(' ')
+function createTimeInEvent(employee ,Date){
+  let [date , hour]= Date.split(' ')
   
-//   employee.timeInEvents.push({
-//     type:"TimeIn",
-//     date:date,
-//     hour:parseInt(hour,10)
+  employee.timeInEvents.push({
+    type:"TimeIn",
+    date:date,
+    hour:parseInt(hour,10)
     
-//   })
-//   return employee
-// }
+  })
+  return employee
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
