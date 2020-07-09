@@ -24,7 +24,7 @@ function createTimeInEvent(Date){
     hour:parseInt(hour,10)
     
   })
-  return employee
+  return this
 }
 
 function createTimeOutEvent(Date){
