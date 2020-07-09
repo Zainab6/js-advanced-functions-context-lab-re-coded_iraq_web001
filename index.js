@@ -2,7 +2,7 @@
 
 const employee =["Gray", "Worm","Security",1]
 
-function createEmployeeRecord (employee){
+function createEmployeeRecord(employee){
 return { firstName :employee[0],
           familyName:employee [1],
           title :employee[2],
