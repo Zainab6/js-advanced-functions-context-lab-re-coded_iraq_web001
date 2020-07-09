@@ -10,7 +10,9 @@ return { firstName :employee[0],
 }
 }
 
-
+function createEmployeeRecords(twoRows){
+  return  twoRows.map(row => createEmployeeRecord(row))
+  }
 
 
 /*
