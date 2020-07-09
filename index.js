@@ -1,5 +1,55 @@
 /* Your Code Here */
 
+function createEmployeeRecord(employee){
+return { firstName :employee[0],
+          familyName:employee [1],
+          title :employee[2],
+          payPerHour :employee[3],
+          timeInEvents:[],
+          timeOutEvents:[]
+}
+}
+
+function createEmployeeRecords(twoRows){
+  return  twoRows.map(row => createEmployeeRecord(row))
+  }
+  
+  
+function createTimeInEvent(Date){
+ let [date , hour] = Date.split(' ')
+  
+  this.timeInEvents.push({
+    type:"TimeIn",
+    date:date,
+    hour:parseInt(hour,10)
+    
+  })
+  return this
+}
+
+function createTimeOutEvent(Date){
+ let [date , hour]= Date.split(' ')
+  
+  this.timeOutEvents.push({
+    type:"TimeOut",
+    date:date,
+    hour:parseInt(hour,10)
+    
+  })
+  return this
+}
+
+function hoursWorkedOnDate(reqDate){
+  let timeIn = this.timeInEvents.find(event=>event.date===reqDate)
+ let timeOut = this.timeOutEvents.find(event=>event.date===reqDate)
+ 
+ return (timeOut.hour - timeIn.hour)/100
+}
+
+function wagesEarnedOnDate(reqDate){
+  return hoursWorkedOnDate.call(this,reqDate)*this.payPerHour
+}
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
@@ -19,4 +69,14 @@ let allWagesFor = function () {
     }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
 
     return payable
+}
+
+function findEmployeeByFirstName(empArr,firstName){
+ return  empArr.find(emp=>emp.firstName === firstName)
+  
+}
+
+function calculatePayroll(employee){
+ return  employee.reduce((accum,emp)=>accum + allWagesFor.call(emp),0)
+  
 }
