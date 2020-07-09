@@ -15,10 +15,10 @@ function createEmployeeRecords(twoRows){
   }
   
   
-function createTimeInEvent(employee,Date){
+function createTimeInEvent(Date){
  let [date , hour] = Date.split(' ')
   
-  employee.timeInEvents.push({
+  this.timeInEvents.push({
     type:"TimeIn",
     date:date,
     hour:parseInt(hour,10)
@@ -27,16 +27,16 @@ function createTimeInEvent(employee,Date){
   return employee
 }
 
-function createTimeOutEvent(employee ,Date){
+function createTimeOutEvent(Date){
  let [date , hour]= Date.split(' ')
   
-  employee.timeOutEvents.push({
+  this.timeOutEvents.push({
     type:"TimeOut",
     date:date,
     hour:parseInt(hour,10)
     
   })
-  return employee
+  return this
 }
 
 /*
