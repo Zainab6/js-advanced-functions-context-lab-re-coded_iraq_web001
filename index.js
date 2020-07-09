@@ -46,9 +46,9 @@ function hoursWorkedOnDate(reqDate){
  return (timeOut.hour - timeIn.hour)/100
 }
 
-function wagesEarnedOnDate(reqDate){
-  return hoursWorkedOnDate(reqDate)*this.payPerHour
-}
+// function wagesEarnedOnDate(reqDate){
+//   return hoursWorkedOnDate(reqDate)*this.payPerHour
+// }
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
