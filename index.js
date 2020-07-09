@@ -39,6 +39,14 @@ function createTimeOutEvent(Date){
   return this
 }
 
+function hoursWorkedOnDate(reqDate){
+  let timeIn = this.timeInEvents.find(event=>event.date===reqDate)
+ let timeOut = this.timeOutEvents.find(event=>event.date===reqDate)
+ 
+ return (timeOut.hour - timeIn.hour)/100
+}
+
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
