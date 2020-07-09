@@ -27,7 +27,17 @@ function createTimeInEvent(employee,Date){
   return employee
 }
 
-
+function createTimeOutEvent(employee ,Date){
+  let [date , hour]= Date.split(' ')
+  
+  employee.timeOutEvents.push({
+    type:"TimeOut",
+    date:date,
+    hour:parseInt(hour,10)
+    
+  })
+  return employee
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
