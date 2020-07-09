@@ -70,3 +70,13 @@ let allWagesFor = function () {
 
     return payable
 }
+
+function findEmployeeByFirstName(empArr,firstName){
+ return  empArr.find(emp=>emp.firstName === firstName)
+  
+}
+
+function calculatePayroll(employee){
+ return  employee.reduce((accum,emp)=>accum + allWagesFor(emp),0)
+  
+}
