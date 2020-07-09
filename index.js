@@ -24,7 +24,7 @@ function createTimeInEvent(employee ,Date){
     hour:parseInt(hour,10)
     
   })
-  return employee
+  return this
 }
 
 /*
