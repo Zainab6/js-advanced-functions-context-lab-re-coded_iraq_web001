@@ -11,11 +11,21 @@ return { firstName :employee[0],
 }
 
 function createEmployeeRecords(twoRows){
-  return  twoRows.map(row => createEmployeeRecord(row))
+  return  this.map(row => createEmployeeRecord(row))
   }
   
   
-
+// function createTimeInEvent(employee ,Date){
+//   let [date , hour]= Date.split(' ')
+  
+//   employee.timeInEvents.push({
+//     type:"TimeIn",
+//     date:date,
+//     hour:parseInt(hour,10)
+    
+//   })
+//   return employee
+// }
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
