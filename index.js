@@ -15,7 +15,7 @@ function createEmployeeRecords(twoRows){
   }
   
   
-function createTimeInEvent(employee ,Date){
+function createTimeInEvent(employee,Date){
   let [date , hour] = Date.split(' ')
   
   this.timeInEvents.push({
